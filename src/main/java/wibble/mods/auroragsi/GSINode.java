@@ -137,6 +137,7 @@ public class GSINode {
         private boolean isDayTime;
         private boolean isRaining;
         private float rainStrength;
+        private int dimensionID;
 
         private void update() {
             try {
@@ -146,7 +147,14 @@ public class GSINode {
                 isDayTime = world.isDay();
                 rainStrength = world.getRainGradient(1);
                 isRaining = world.isRaining();
-                world.isRaining();
+                String dimensionName = world.getDimensionKey().getValue().getPath();
+                if (dimensionName.equals("the_nether")) {
+                    dimensionID = -1;
+                } else if (dimensionName.equals("overworld")) {
+                    dimensionID = 0;
+                } else if (dimensionName.equals("the_end")) {
+                    dimensionID = 1;
+                }
             } catch (Exception ignore) {
             }
         }
