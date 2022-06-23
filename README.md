@@ -1,6 +1,6 @@
 ![Logo](public/logo.png)
 
-# Aurora GSI (Game State Integration) for Minecraft 1.15
+# Aurora GSI (Game State Integration) for Minecraft 1.19
 
 Aurora GSI for Minecraft is a Fabric mod that sends game variables from Minecraft to the Aurora keyboard lighting software. Aurora can then use these variables to change the lighting on individual keys on your RGB keyboard, such as making a health bar or experience bar.
 
